@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import "bootstrap/dist/css/bootstrap.min.css"
-import  '@fortawesome/fontawesome-free/css/all.min.css';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+
+// الحصول على عنصر الجذر
+const rootElement = document.getElementById("root");
+
+// إنشاء الجذر باستخدام createRoot
+const root = ReactDOM.createRoot(rootElement);
+
+// عرض التطبيق
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
   </React.StrictMode>
 );
-
-reportWebVitals();
